@@ -1,0 +1,32 @@
+.field {
+  width: 10px;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+label {
+  display: block;
+  float: left;
+}
+input {
+  border: 1px solid gainsboro;
+  border-radius: 4px;
+  background-color: white;
+  padding: 3px 5px;
+  width: 200px;
+}
+
+input[type="date"] {
+  -webkit-appearance: none;
+}
+
+input:hover {
+  animation: date-hover 0.3s ease-in forwards;
+}
+
+@keyframes date-hover {
+  from {
+  }
+  to {
+    background-color: orange;
+  }
+}

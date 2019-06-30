@@ -1,0 +1,128 @@
+/* Here below you should make your changes */
+@keyframes static {
+    /* Insert your changes */
+    0%{
+	    background-image: url(resources/tv.png),linear-gradient(
+	    	90deg,
+	    	white 12.5%,
+	    	black 12.5%,
+	    	black 25%,
+	    	blue 25%,
+	    	blue 37.5%,
+	    	red 37.5%,
+	    	red 50%,
+	    	purple 50%,
+	    	purple 62.5%,
+	    	green 62.5%,
+	    	green 75%,
+	    	aqua 75%,
+	    	aqua 87.5%,
+	    	yellow 87.5%);
+	    background-size: 510px 350px, 70% 80%;
+	    background-position: -5px 0, 20%;
+	    background-repeat: no-repeat;
+    }
+    100%{
+    	background-image: url(resources/tv.png),linear-gradient(
+	    	270deg,
+	    	white 12.5%,
+	    	black 12.5%,
+	    	black 25%,
+	    	blue 25%,
+	    	blue 37.5%,
+	    	red 37.5%,
+	    	red 50%,
+	    	purple 50%,
+	    	purple 62.5%,
+	    	green 62.5%,
+	    	green 75%,
+	    	aqua 75%,
+	    	aqua 87.5%,
+	    	yellow 87.5%);
+    	background-size: 510px 350px, 70% 80%;
+    	background-position: -5px 0, 20%;
+    	background-repeat: no-repeat;
+    }
+    
+}
+
+@keyframes level-1 {
+    /* Insert your changes */
+    0%{
+    	background-position: -5px 0, 0 10px;
+  	}
+  	100% { 
+    	background-position: -5px 0, -3400px 10px;
+  	}
+}
+
+@keyframes move-cartridge {
+    /* Insert your changes */
+    60%{
+    	opacity: 1;
+    }
+    100%{
+    	left: 40%;
+    	bottom: 42%;
+    	opacity: 0;
+    }
+}
+
+.intro {
+    /* Insert your changes */
+    background-image: url(resources/tv.png), url(resources/intro.png);
+    background-size: 510px 350px, 375px 260px;
+    background-repeat: no-repeat;
+    background-position: -5px 0px, 20px 30px;
+
+}
+
+.level-1 {
+    /* Insert your changes */
+    background-image: url(resources/tv.png), url("resources/stage1.png"); 
+    background-size: 510px 350px, 3825px 300px;
+    background-repeat: no-repeat;
+    background-position: -5px 0, 20px 10px;
+    animation: level-1 20s linear;
+    animation-fill-mode: forwards;
+
+}
+
+.static {
+    /* Insert your changes */
+    animation: static 2s infinite linear;
+}
+
+
+.move-cartridge {
+    /* Insert your changes */
+    animation: move-cartridge 2s;
+    animation-fill-mode: forwards;
+}
+
+#television {
+    height: 350px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+#nes-console {
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background-image: url(resources/nes.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#nes-cartridge {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 300px;
+    bottom: 0px;
+    background-image: url(resources/contra-cartridge.png);
+    background-size: cover;
+    transform: perspective(100px) rotateX(45deg) rotateZ(30deg);
+}

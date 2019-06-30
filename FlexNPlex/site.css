@@ -1,0 +1,112 @@
+/* EDIT BELOW THIS LINE */
+
+/* Add styles for section-1 */
+.section-1{
+	height: 200px;
+}
+
+.section-1 .flex-item{
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+    justify-content: center;
+}
+
+.section-1 .flex-item:nth-of-type(odd) {
+	flex-grow: 2;
+}
+
+/* Add styles for section-2 */
+.section-2{
+	flex-direction: column-reverse;
+}
+
+.section-2 .flex-item:first-child{
+	width: 50%;
+	flex-grow: 1;
+	justify-content: center;
+}
+
+.section-2 .flex-item:last-child{
+	width: 50%;
+	flex-grow: 1;
+	align-self: flex-end;
+	justify-content: center;
+}
+
+/* Add styles for section-3 */
+.section-3{
+	flex-flow: column wrap;
+}
+
+.section-3 .flex-item:not(first-child):not(last-child){
+	flex-basis: 50%;
+}
+
+.section-3 .flex-item:first-child, .section-3 .flex-item:last-child{
+	flex-basis: 100%;
+}
+
+/* Add styles for section-4 */
+.section-4{
+	justify-content: space-between;
+	align-items: center;
+}
+
+.section-4 .flex-item{
+	height: 60px;
+	width: 100px;
+}
+
+/* Add styles for section-5 */
+.section-5{
+	flex-wrap: wrap-reverse;
+	flex-direction: column-reverse;
+	align-items: center;
+	justify-content: center;
+}
+
+.section-5 .space-invader:first-child{
+	order:1;
+}
+
+/* Add styles for section-6 */
+.section-6{
+	justify-content: space-around;
+	align-items: flex-end;
+	flex-direction: row-reverse;
+}
+
+
+/* Add styles for section-7 */
+.section-7{
+	flex-flow: column wrap-reverse;
+	align-items: flex-end;
+	align-content: space-between;
+	justify-content: center;
+}
+
+.section-7 .cartoon:not(.carebear-pink){
+	flex-basis: 25%;
+}
+
+.section-7 .cartoon.carebear-pink{
+	align-self: flex-start;
+}
+
+.section-7 .cartoon.carebear-yellow{
+	order: -1;
+}
+
+/* Add styles for section-8 */
+.section-8{
+	flex-flow: column-reverse wrap; 
+}
+
+.section-8 .flex-item:first-child{
+	flex-basis: 100%;
+}
+
+.section-8 .flex-item:not(first-child){
+	flex-basis: 20%;
+}

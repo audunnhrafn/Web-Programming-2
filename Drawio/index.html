@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.png" />
+    <title>Draw io</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar">
+                    <div class="icons" data-shape="color" id="color"><i class="fas fa-palette"></i></div>
+                    <input type="color" id="color-picker" style="display:none" />
+                    <div class="icons" data-shape="move"><i class="fas fa-arrows-alt"></i></div>
+                    <div class="icons selected" data-shape="pencil"><i class="fas fa-pencil-alt"></i></div>
+                    <div class="icons" data-shape="eraser"><i class="fas fa-eraser"></i></div>
+                    <!--SHAPES-->
+                    <div class="icons" data-shape="circle"><i class="far fa-circle"></i></div>
+                    <div class="icons" data-shape="rectangle"><i class="far fa-square"></i></div>
+
+                    <div class="icons" data-shape="line"><i class="fas fa-slash"></i></div>
+                </nav>
+            </div>
+        </div>
+        <!--SIDEBAR OPERATIONS-->
+        <div class="row">
+            <div class="col-lg-2">
+
+
+
+
+
+
+
+                <div class="row">
+                    <div class="col-lg-12 sidebar">
+                        <div class="icons" id="save-button"><i class="far fa-save"></i></div>
+                        <div class="dropdown">
+                            <div class="icons" id="load-button"><i class="fas fa-cloud-upload-alt"></i></div>
+                            <div id="saved-drawings">
+                                <!--Append saved drawing names here-->
+                            </div>
+                        </div>
+                        <div class="icons" id="undo-button"><i class="fas fa-undo"></i></div>
+                        <div class="icons" id="redo-button"><i class="fas fa-redo"></i></div>
+                        <div class="icons" data-shape="delete"><i class="fas fa-trash-alt"></i></div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 sidebar"  >
+                        <div class="icons" data-shape="text" id="text">
+                            <i class="fas fa-font"></i>
+                            <input type="text" id="text-input" placeholder="write on canvas" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        
+                    <div class="col-lg-12 sidebar">
+                        <p class="static-icons" style="font-weight: bold;">Font</p>
+                        <select id="font-picker" class="font-family" >
+                            <option value="Arial" selected="selected">Arial</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Times">Times</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Courier">Courier</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Palatino">Palatino</option>
+                            <option value="Garamond">Garamond</option>
+                            <option value="Bookman">Bookman</option>
+                            <option value="Comic Sans MS">Comic Sans MS</option>
+                            <option value="Trebuchet MS">Trebuchet MS</option>
+                            <option value="Arial Black">Arial Black</option>
+                            <option value="Impact">Impact</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 sidebar">
+                            <i class="static-icons fas fa-text-height"></i><input class="sidebar"  style="width: 70%" type="range" min="1" max="50" value="5" class="slider" id="line-width-slider">
+
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-lg-10">
+                <canvas id="my-canvas" width="1200" height="700">
+                    <p>Your browser doesn't support canvas.</p>
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="shapes.js"></script>
+    <script src="drawio.js"></script>
+</body>
+
+</html>

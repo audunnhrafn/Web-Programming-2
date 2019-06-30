@@ -1,0 +1,16 @@
+{
+  "name": "infinity-modules-styles",
+  "version": "0.1.0",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.8.6",
+    "prop-types": "^15.7.2"
+  },
+  "author": "elias/audunn/gunnlaugur",
+  "license": "ISC",
+  "keywords": [
+    "react",
+    "styling-react",
+    "greatest-library-of-all-time"
+  ]
+}
